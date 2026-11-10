@@ -8,7 +8,8 @@ You will find a "Tools and resources on this page" section at the bottom of most
 
 The [All tools and resources](all_tools_and_resources) table is described in a central YAML file, [tool_and_resource_list.yml](https://github.com/elixir-europe/rdmkit/blob/master/_data/tool_and_resource_list.yml), in the `_data` directory. Tools and resources can be manually linked to [FAIRsharing.org](https://fairsharing.org/), [bio.tools](https://bio.tools) and [TeSS](https://tess.elixir-europe.org/). We also run a fully automatic weekly check that links tools and resources with the corresponding registries. A GitHub Bot will open a Pull Request (PR) when new links are found.
 
-{% include callout.html type="important" content="Possible links between a tool or resource and registries such as FAIRsharing, TeSS, or bio.tools are automatically identified using GitHub Actions on a weekly basis. If the automatically proposed link is not relevant, and there is no other FAIRsharing ID, bio.tools ID, or TeSS query available for the source, you can overwrite the automatic linking by adding `NA` as the value of a registry field." %}
+{: .important }
+> Possible links between a tool or resource and registries such as FAIRsharing, TeSS, or bio.tools are automatically identified using GitHub Actions on a weekly basis. If the automatically proposed link is not relevant, and there is no other FAIRsharing ID, bio.tools ID, or TeSS query available for the source, you can overwrite the automatic linking by adding `NA` as the value of a registry field.
 
 
 ## When can you add a new tool or resource
@@ -35,7 +36,7 @@ Each tool or resource mentioned in the text has metadata stored in the [main YAM
 - **name**: the name of the tool or resource
 - **url**: URL to the main page of the tool or resource, make sure to let the URL start with `https://`
 - **description**: A short description of the tool or resource. Try to not use the characters `"` or `'` 
-- **registry**: 3 registries are supported: [Bio.tools](https://bio.tools), [FAIRsharing.org](https://fairsharing.org/) and [TeSS](https://tess.elixir-europe.org/). The keywords you can use respectively are: `biotools`, `fairsharing`, `fairsharing-coll` and `tess`, specifying the id or query with a colon. For FAIRsharing, copy the alphanumeric characters after "FAIRsharing." in the DOI. FAIRsharing collections are not associated with a DOI but use a four-digit ID well-visible on the page. List registries under the `registry` attribute as `key: value pairs`. If no FAIRsharing ID, bio.tools ID or TeSS query is available for a source, you can overwrite the automatic linking by adding 'NA' as a registry.
+- **registry**: 3 registries are supported: [Bio.tools](https://bio.tools), [FAIRsharing.org](https://fairsharing.org/) and [TeSS](https://tess.elixir-europe.org/). The keywords you can use respectively are: `biotools`, `fairsharing` and `tess`, specifying the ID or query with a colon. For FAIRsharing records (including collections), copy the alphanumeric characters after "FAIRsharing." in the DOI. List registries under the `registry` attribute as `key: value pairs`. If no FAIRsharing DOIs, bio.tools ID or TeSS query is available for a source, you can overwrite the automatic linking by adding 'NA' as a registry.
 
 Example:
 
@@ -67,7 +68,8 @@ Example:
   {% endraw %}
   ```
 
-  {% include callout.html type="important" content="Don't forget to add the `\"` double quotes around the tool_id and make sure to use the exact tool_id as described in the YAML file." %}
+  {: .important }
+  > Don't forget to add the `"` double quotes around the tool_id and make sure to use the exact tool_id as described in the YAML file.
 
   Example:
 

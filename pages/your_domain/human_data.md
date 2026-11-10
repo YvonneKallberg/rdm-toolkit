@@ -2,20 +2,22 @@
 title: Human data
 description: Data management solutions for human data.
 contributors: [Niclas Jareborg, Nirupama Benis, Ana Portugal Melo, Pinar Alper, Laura Portell Silva, Wolmar Nyberg Åkerström, Nazeefa Fatima, Vilem Ded, Teresa D'Altri]
+editors: [Niclas Jareborg]
 page_id: human_data
 related_pages:
   Your_tasks: [sensitive, gdpr_compliance]
   Tool_assembly: [tsd, covid19_data_portal, transmed, fairtracks]
 training:
-  - name: Training in TeSS
+  - name: Sensitive human data Search query in TeSS
     registry: TeSS
     url: https://tess.elixir-europe.org/search?q=sensitive%20human%20data
   - name: A FAIR guide for data providers to maximise sharing of human genomic data
     url: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005873
-  - name: Toward better governance of human genomic data
-    url: https://tess.elixir-europe.org/search?q=sensitive%20human%20data
-  - name: OMOP Common Data Model and the OHDSI analytics for observational analytics of real world healthcare data courses in EHDEN academy
+  - name: EHDEN Academy courses on OMOP Common Data Model and OHDSI analytics
     url: https://academy.ehden.eu/
+fairsharing:
+- name: Human data collection
+  url: https://fairsharing.org/7483
 dsw:
 - name: Will you collect any data connected to a person, "personal data"?
   uuid: 49c009cb-a38c-4836-9780-8a8b3dd1cbac
@@ -135,7 +137,7 @@ It is a good ethical practice to ensure that data underlying research is preserv
 ### Solutions
 * {% tool "ga4gh-data-security-toolkit" %}
 * {% tool "iso-iec-27001" %} is an international information security standard adopted by data centres of some universities and research institutes.
-* {% tool "the-european-genome-phenome-archive" %} is an international service for secure archiving and sharing of all types of personally identifiable genetic and phenotypic data resulting from biomedical studies and healthcare centres. All services are free of charge. The EGA stores the data and metadata long-term, without ending date of the service. The data is backed-up in two separate geographical locations. The storing is GDPR-compliant, thanks to the use of [Ga4GH encryption standard](https://www.ga4gh.org/news/crypt4gh-a-secure-method-for-sharing-human-genetic-data/) and continuously kept up-to-date. National repositories working as Federated EGA nodes are available in some countries like Sweden, Norway, Finland, Germany and Spain. Those may address specific additional national legal needs, not included in European regulation.
+* {% tool "the-european-genome-phenome-archive" %} is an international service for secure archiving and sharing of all types of personally identifiable genetic and phenotypic data resulting from biomedical studies and healthcare centres. All services are free of charge. The EGA stores the data and metadata long-term, without ending date of the service. The data is backed-up in two separate geographical locations. The storing is GDPR-compliant, thanks to the use of [Ga4GH encryption standard](https://www.ga4gh.org/news/crypt4gh-a-secure-method-for-sharing-human-genetic-data/) and continuously kept up-to-date. National repositories working as {% tool "fega" %} nodes are available in some countries like Sweden, Norway, Finland, Germany and Spain. Those may address specific additional national legal needs, not included in European regulation.
 * {% tool "dpia-knowledge-model" %} is a DSW knowledge model guiding users through a set of questions to collect information necessary for a research project Data Protection Impact Assessment (DPIA).
 
 ## Sharing and reusing of human data

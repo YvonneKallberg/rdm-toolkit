@@ -3,6 +3,7 @@
 title: Czech Republic
 country_code: CZ
 contributors: [Karel Berka, Marek Suchánek]
+editors: [Bert Droesbeke, Nazeefa Fatima]
 coordinators: [Karel Berka]
 
 # Link to other pages in the tool assembly section on the RDMkit by listing the page_id 
@@ -10,16 +11,16 @@ related_pages:
   Tool_assembly: []
 
 training:
-  - name: Training in TeSS
+  - name: ELIXIR Czech Republic Training material in TeSS
     registry: TeSS
     url: https://tess.elixir-europe.org/content_providers/elixir-the-czech-republic-node
-  - name: ELIXIR-CZ YouTube
+  - name: ELIXIR-CZ YouTube Channel
     registry: YouTube
     url: https://www.youtube.com/channel/UCt0SKet24szBGjN-V1d4EKw
-  - name: ELIXIR-CZ GitHub
+  - name: ELIXIR-CZ on GitHub
     registry: GitHub
     url: https://github.com/ELIXIR-CZ
-  - name: ELIXIR-CZ Zenodo
+  - name: ELIXIR-CZ community in Zenodo
     registry: Zenodo
     url: https://zenodo.org/communities/elixir-cz/
 
@@ -51,7 +52,7 @@ national_resources:
     url: https://www.e-infra.cz/en
   - name: ownCloud@CESNET
     description: CESNET-hosted ownCloud is a 100 GB cloud storage freely available for Czech scientists to manage their data from any research projects.
-    how_to_access: To use the CESNET-hosted ownCloud, you have to be an employee or a student of a Czech academic organization. For technical reasons, you have to have an account in [eduID.cz](https://eduid.cz).
+    how_to_access: To use the CESNET-hosted ownCloud, you have to be an employee or a student of a Czech academic organisation. For technical reasons, you have to have an account in [eduID.cz](https://eduid.cz).
     instance_of: owncloud
     related_pages:
       Tool_assembly: []
@@ -61,7 +62,7 @@ national_resources:
     url: https://du.cesnet.cz/en/navody/owncloud/start/
   - name: Czech National Repository
     description: National Repository (NR) is a service provided to the scientific and research communities in the Czech Republic to store their generated research data together with persistent DOI identifier. NR service is currently under the pilot program. 
-    how_to_access: To use National Repository, you have to be an employee or a student of a Czech academic organization. For technical reasons, you have to have an account in [eduID.cz](https://eduid.cz) and if you want to upload.
+    how_to_access: To use National Repository, you have to be an employee or a student of a Czech academic organisation. For technical reasons, you have to have an account in [eduID.cz](https://eduid.cz) and if you want to upload.
     instance_of:
     related_pages:
       Tool_assembly: []
@@ -69,7 +70,6 @@ national_resources:
       Your_role: [researcher, data_steward, research_software_engineer]
       Your_tasks: [storage, existing_data, identifiers, dmp]
     url: https://data.narodni-repozitar.cz/
-
 ---
 
 ## Introduction 
