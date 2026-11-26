@@ -1,10 +1,11 @@
 ---
 title: Data publication
 contributors: [Munazah Andrabi, Ulrike Wittig, Elin Kronander, Flora D'Anna, Aitana Neves, Nazeefa Fatima, Carla Cummins, Korbinian Bösl, Marina Popleteeva]
+editors: [Munazah Andrabi, Flora D'Anna]
 description: How to prepare data and find repositories for publication.
 page_id: data_publication
 related_pages: 
-    Tool_assembly: []
+    Tool_assembly: [metabarcoding_assembly]
 faircookbook:
 - name: Depositing to generic repositories - Zenodo use case
   url: https://w3id.org/faircookbook/FCB009
@@ -59,6 +60,7 @@ The most suitable repository will depend on the data type and your discipline.
 * Check if/what discipline-specific repositories can apply the necessary access conditions and licences to your (meta)data.
 * Discipline-specific repositories: if a discipline-specific repository, recognised by the community, exists this should be your first choice since discipline-specific repositories often increases the FAIRness of the data.
   * The {% tool "embl-ebi-s-data-submission-wizard" %} can help you choose a suitable repository based on your data type.
+  * The {% tool "spatial-transcriptomics-portal" %} directs you to the relevant spatial sequencing and imaging archives for retrieving data or submitting new studies.
   * There are lists of discipline-specific, community-recognised repositories e.g.:
    * {% tool "elixir-deposition-databases-for-biomolecular-data" %} including {% tool "arrayexpress" %}, {% tool "biomodels" %}, {% tool "biostudies" %}, {% tool "european-nucleotide-archive" %}, {% tool "pdb" %}, {% tool "pride" %}
    * [Scientific Data journal's recommended repositories](https://www.nature.com/sdata/policies/repositories)

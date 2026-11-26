@@ -1,8 +1,9 @@
 ---
 title: XNAT-PIC
 contributors: [Sara Zullino, Alessandro Paglialonga, Walter Dastrù, Dario Longo, Silvio Aime]
+editors: [Bert Droesbeke, Korbinian Bösl]
 page_id: xnat_pic
-affiliations: [Euro BioImaging, IT]
+supported_by: [Euro BioImaging, IT]
 related_pages: 
   Your_tasks: [data_organisation, storage, data_analysis]
   Your_domain: []
@@ -12,17 +13,17 @@ training:
     url: https://www.eosc-life.eu/d5/
   - name: Euro-Bioimaging website
     url: https://www.eurobioimaging.eu/news/towards-sharing-and-reusing-of-preclinical-image-data
-  - name: Data Management - Biological and Preclinical Imaging Perspective
+  - name: Data Management - Biological and Preclinical Imaging Perspective YouTube Video
     registry: YouTube
     url: https://www.youtube.com/watch?v=QNiAGuFk53w
-  - name: XNAT-PIC - expanding XNAT for image archiving and processing to Preclinical Imaging Centers
+  - name: XNAT-PIC - expanding XNAT for image archiving and processing to Preclinical Imaging Centers YouTube Video
     registry: YouTube
     url: ttps://www.youtube.com/cpEcfIJJqCo
 ---
 
 ## What is XNAT-PIC?
 
-Preclinical imaging centers deal with many challenges mostly related to the variety of imaging instrumentation yielding huge volumes of raw data. The current procedures to collect, share and reuse preclinical image data are insufficient, thus revealing an urgent need of standardization in terms of data storage and image processing. **{% tool "xnat" %} for Preclinical Imaging Centers (XNAT-PIC)** has been developed to overcome this limitation by extending XNAT’s basic functionalities to meet the needs of preclinical imaging facilities.
+Preclinical imaging centers deal with many challenges mostly related to the variety of imaging instrumentation yielding huge volumes of raw data. The current procedures to collect, share and reuse preclinical image data are insufficient, thus revealing an urgent need of standardisation in terms of data storage and image processing. **{% tool "xnat" %} for Preclinical Imaging Centers (XNAT-PIC)** has been developed to overcome this limitation by extending XNAT’s basic functionalities to meet the needs of preclinical imaging facilities.
 
 **XNAT for Preclinical Imaging Centers (XNAT-PIC)** consists of a set of tools built in Python and MATLAB to [store](storage), [process](processing) and [share](sharing) preclinical imaging studies built on top of the {% tool "xnat" %} imaging informatics platform.
  

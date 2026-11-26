@@ -4,9 +4,10 @@ page_id: analyse
 related_pages: 
   Your_tasks: [data_analysis, data_organisation, storage, data_provenance]
 contributors: [Rob Hooft, Olivier Collin, Munazah Andrabi, Flora D'Anna]
+editors: [Munazah Andrabi]
 description: Introduction to data analysis.
 training:
-  - name: Training in TeSS
+  - name: Data analysis Search query in TeSS
     registry: TeSS
     url: https://tess.elixir-europe.org/search?q=%22data+analysis%22#materials
 ---
@@ -14,7 +15,7 @@ training:
 ## What is data analysis?
 
 Data analysis consists in exploring the collected data to begin understanding the messages contained in a dataset and/or in applying mathematical formula (or models) to identify relationships between variables.
-The steps of the workflow in the analysis phase will often be repeated several times to explore the data as well as to optimize the workflow itself.
+The steps of the workflow in the analysis phase will often be repeated several times to explore the data as well as to optimise the workflow itself.
 According to the different types of data (quantitative or qualitative) the data analysis methods will differ. Data analysis follows the (often automated, batch) data processing stage.
 
 ## Why is data analysis important?

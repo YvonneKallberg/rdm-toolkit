@@ -2,16 +2,16 @@
 title: Virology
 description: Data management solutions for virology data.
 contributors: [Niels Geudens, Flora D'Anna, Romain David, Philippe Lieutaud]
+editors: [Gil Poiares-Oliveira, Federico Bianchini, Flora D'Anna, Bert Droesbeke]
+supported_by: [EVORA]
 page_id: virology
 related_pages: 
   Your_tasks: [data_brokering, gdpr_compliance, ethics, compliance, sensitive, data_security, data_discoverability, identifiers]
   Tool_assembly: [covid19_data_portal]
-# More information on which page id you can use can be found at https://rdmkit.elixir-europe.org/website_overview
-training:
-  - name:
-    registry:
-    url:
 # More information on how to fill in this metadata section can be found here https://rdmkit.elixir-europe.org/page_metadata
+fairsharing:
+- name: Virology collection
+  url: https://fairsharing.org/7482
 ---
 
 ## Introduction
@@ -46,8 +46,11 @@ To effectively manage data heterogeneity in virology outbreak surveillance, seve
   * Integrate epidemiological and genomic data for outbreak analysis, by utilising phylodynamic workflows (e.g. BEAST, {% tool "nextstrain" %}, or TreeTime), enabling real-time outbreak tracking.
   * Implement structured pipelines for linking viral genome sequences with patient and outbreak metadata.
 * Apply domain-specific vocabularies for consistent annotation
-  * Utilise the {% tool "evora-ontology" %} and {% tool "ictv" %} to ensure that virus-related metadata terms are standardised and interoperable.
-  * Monitor updates in virology-specific ontologies to maintain alignment with evolving standards.
+  * Use {% tool "ictv" %} as the authoritative source for virus taxonomy. Its website provides interfaces for searching and browsing current and historical taxonomy, viewing taxon histories and downloading the current taxonomy release. Use these interfaces for human exploration of the official classification and nomenclature of viruses.
+  * Use the {% tool "ictv-ontology" %} when you need machine-readable or programmatic access to ICTV taxonomy. The ontology is browsable through the {% tool "ontology-lookup-service" %}, but its main purpose is to support programmatic access either through ICTV-specific OLS API endpoints or through JavaScript, Python and PHP helper libraries. The libraries simplify taxon searches, lineage retrieval, historical taxon resolution and use of mappings to support interoperability with {% tool "ncbi-taxonomy" %}. Consult the [ICTV Ontology API documentation](https://evora-project.github.io/ictv-ontology/) for examples.
+  * Use the {% tool "evora-ontology" %} when you need to describe pathogen resources and services in a catalogue. It provides a Data Catalog Vocabulary-compatible model for pathogen materials, derived products such as nucleic acids, proteins and antibodies, detection kits and services. The model covers metadata needed to find, compare and request these resources, including their biological origin, availability, access route, biosafety, transport, licensing, provenance and contacts. See the [EVORAO repository](https://github.com/EVORA-project/evora-ontology) for documentation, source files and implementation resources.
+  * Use the two ontologies together for interoperable pathogen-resource catalogues: describe the resource or service with EVORAO and link its taxonomic identification to a stable ICTV identifier. EVORAO does not replace a taxonomic resource, while the ICTV Ontology does not describe the characteristics or access conditions of catalogue offers.
+  * Record the ontology and taxonomy release used in your metadata, and prefer persistent identifiers to taxon labels alone. Labels and classifications can change between ICTV releases.
 By implementing these best practices, outbreak surveillance data can be better structured, more interoperable, and more effectively shared, ultimately improving global response efforts to viral outbreaks.
 
 ## Data Sensitivity & Ethics
@@ -97,8 +100,8 @@ To ensure secure and effective data sharing in virology outbreak surveillance, r
   * Implement data access governance models that allow tiered access based on user credentials and need.
   * Utilise {% tool "pathoplexus" %} for managing metadata and access rights in a structured manner. It is an open-source database dedicated to the efficient sharing of human viral pathogen genomic data, fostering global collaboration and public health response.
 * Ensure proper deposition of outbreak data into trusted repositories to facilitate data sharing, citation, and reuse, following best practices outlined on the [Data Publication](data_publication) page.
-  * Submit viral genomic sequences and epidemiological data to {% tool "gisaid" %}, NCBI {% tool "genbank" %}, and {% tool "european-nucleotide-archive" %} for public accessibility.
-  * Use standard submission pipelines to ensure compliance with repository-specific metadata and formatting guidelines.
+  * Submit viral genomic sequences and epidemiological data to {% tool "gisaid" %}, NCBI {% tool "genbank" %}, and {% tool "european-nucleotide-archive" %} for public accessibility. Please note that ENA provides free, unrestricted access to deposited records, whereas GISAID uses a controlled-access model requiring registration and acceptance of its terms of use.
+  * Use standard submission pipelines to ensure compliance with repository-specific metadata and formatting guidelines. For example, use the {% tool "ena-reads-assembly-submission-workflow" %} to support submission of raw reads and assembled sequences to ENA. Implemented in {% tool "galaxy" %}, it provides an interactive submission process with metadata capture and validation aligned with [ENA requirements](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html).
 * Assign persistent identifiers to datasets to enhance discoverability, citation, and long-term accessibility, following recommendations on the [Identifiers](identifiers) page.
   * Register DOIs or accession numbers for datasets to facilitate long-term accessibility and proper citation.
   * Ensure metadata linking persistent identifiers is properly formatted and recorded.

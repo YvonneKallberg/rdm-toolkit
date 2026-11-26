@@ -1,10 +1,12 @@
 ---
 title: Data organisation
-contributors: [Siiri Fuchs, Minna Ahokas, Yvonne Kallberg, Ivan Mičetić, Marina Popleteeva, Naeem Muhammad]
+contributors: [Siiri Fuchs, Minna Ahokas, Yvonne Kallberg, Ivan Mičetić, Marina Popleteeva, Naeem Muhammad, Laurent Thomas]
+editors: [Bert Droesbeke, Flora D'Anna]
 description: Best practices to name and organise research data.
 page_id: data_organisation
 related_pages: 
-  Tool_assembly: [ome, transmed, xnat_pic]
+  Tool_assembly: [ome, transmed, xnat_pic, labid, metabarcoding_assembly]
+  Your_tasks: [data_provenance]
 dsw:
 - name: How will you do file naming and file organization?
   uuid: 8e886b55-3287-48e7-b353-daf6ab40f7d8
@@ -43,7 +45,7 @@ Brief and descriptive file names are important in keeping your data files organi
 * Include a unique identifier (see: [Identifiers](identifiers))
 * Include a version number if appropriate: minimum two digits (V02) and extend it, if needed for minor corrections (V02-03). The leading zeros, will ensure the files are sorted correctly.
 * Write your file naming convention down and explain abbreviations in your data documentation.
-* If you need to rename a lot of files in order to organize your project data and manage your files better, it is possible to use applications like {% tool "bulk-rename-utility" %} (Windows, free) and {% tool "renamer4mac" %} (Mac).
+* If you need to rename a lot of files in order to organise your project data and manage your files better, it is possible to use applications like {% tool "bulk-rename-utility" %} (Windows, free) and {% tool "renamer4mac" %} (Mac).
 
 #### Example elements to include in the file name
 * Date of creation
@@ -75,7 +77,7 @@ When making a selection for an appropriate file format, you should consider the 
 - uncompressed;
 - unencrypted.
 
-It is important to differentiate between file formats intended for active phase (data acquisition, data reduction and primary data analysis) and those designed for long-term storage or reuse (sharing, publishing and archiving). For the latter purpose, we recommend utilizing file formats that adhere to open standards, have a broad acceptance, and are unlikely to become obsolete. In the active phase, it is fine to use proprietary device-specific file formats if needed. This is acceptable until you reach the phase of sharing the data for subsequent analysis, and for data validation or control with other team members. At this point, you need to convert (or export) the data for it be usable by members without access to proprietary software or instrumentation that generated it.
+It is important to differentiate between file formats intended for active phase (data acquisition, data reduction and primary data analysis) and those designed for long-term storage or reuse (sharing, publishing and archiving). For the latter purpose, we recommend utilising file formats that adhere to open standards, have a broad acceptance, and are unlikely to become obsolete. In the active phase, it is fine to use proprietary device-specific file formats if needed. This is acceptable until you reach the phase of sharing the data for subsequent analysis, and for data validation or control with other team members. At this point, you need to convert (or export) the data for it be usable by members without access to proprietary software or instrumentation that generated it.
 
 ### Solutions
 The best file formats depend on data types, availability and common acceptance of open file formats and research domain. There is no one size fits all solution. You need to choose the best for your case.
@@ -149,3 +151,19 @@ The top folder should have a README.txt file describing the folder structure and
       README.txt            file and folder description  
 
 * Structured directories can be made by using {% tool "cookiecutter" %},a command-line utility that creates projects from cookiecutters (project templates), e.g. creating a Python package project from a Python package project template.
+
+## What software can I use for data organisation ?
+
+### Description
+While you can solely rely on conventions on filenaming and folder structures, some software also help dealing with the data and associated metadata. These software typically involve a database to record data entries, often providing support for associated metadata, and management of multiple users.    
+
+### Considerations
+The actual choice of software often depends on your application.  
+Those software are often meant to be installed on a server, such that they are available for a full institute or research team. 
+
+### Solutions
+Examples of such software include : 
+* {% tool "omero" %} suitable for microscopy and image-data management. It simplify organisation, browsing and visualisation of image datasets.    
+* {% tool "labid" %} for life-science in general, it features an electronic lab notebook, extensive functionalities for data and metadata management, curation and provenance visualisation.
+
+

@@ -29,6 +29,8 @@ subitems:
     url: /your_domain
     image_url: /assets/img/section-icons/dna.svg
     subitems:
+      - title: Agroecology
+        url: /agroecology
       - title: Biodiversity
         url: /biodiversity
       - title: Bioimaging data
@@ -88,6 +90,8 @@ subitems:
         url: /data_deletion
       - title: Data discoverability
         url: /data_discoverability
+      - title: Data interlinking
+        url: /data_interlinking
       - title: Data management coordination
         url: /dm_coordination
       - title: Data management plan
@@ -136,8 +140,12 @@ subitems:
         url: /galaxy_assembly
       - title: IFB
         url: /ifb_assembly
+      - title: LabID
+        url: /labid_assembly
       - title: Marine Metagenomics
         url: /marine_metagenomics_assembly
+      - title: Metabarcoding
+        url: /metabarcoding_assembly
       - title: MOLGENIS
         url: /molgenis_assembly
       - title: NeLS

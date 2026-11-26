@@ -3,10 +3,11 @@
 title: Germany
 country_code: DE
 contributors: [Ulrike Wittig]
+editors: [Bert Droesbeke, Ulrike Wittig, Laura Portell Silva]
 coordinators: [Ulrike Wittig]
 
 training:
-  - name: Training in TeSS
+  - name: ELIXIR Germany Training material in TeSS
     registry: TeSS
     url: https://tess.elixir-europe.org/materials?node=Germany
 
@@ -72,7 +73,6 @@ ref_to_main_resources:
   - standards-for-reporting-enzyme-data
   - strenda-db
 
-
 ---
 
 
@@ -82,7 +82,7 @@ This page provides useful information and resources with a focus on research dat
 
 ## Funders
 
-* [BMBF - Federal Ministry of Research, Technology and Space (Bundesministerium für ­Forschung, Technologie und Raumfahrt)](https://www.bmbf.de/)
+* [BMFTR - Federal Ministry of Research, Technology and Space (Bundesministerium für ­Forschung, Technologie und Raumfahrt)](https://www.bmftr.bund.de/)
 * [DFG - Deutsche Forschungsgemeinschaft](https://www.dfg.de)
 * Overview of [Research Funding in Germany](https://www.research-in-germany.org/en/)
 

@@ -1,20 +1,21 @@
 ---
 title: Plant Phenomics
 contributors: [Anne-Françoise Adam-Blondon, Cyril Pommier, Bert Droesbeke, Matthias Lange, Daniel Arend, Daniel Faria, Isabelle Alic, Philippe Rocca-Serra, Sebastian Beier, Erwan Le Floch]
+editors: [Bert Droesbeke, Korbinian Bösl]
 description: Tool assembly for managing plant phenomic data.
 page_id: plant_pheno_assembly
-affiliations:
+supported_by:
 related_pages: 
   Your_tasks: [metadata, data_publication]
   Your_domain: [plants]
   Tool_assembly: [plant_geno_assembly]
 training:
-  - name: MIAPPE training in TeSS
+  - name: MIAPPE Search query in TeSS
     registry: TeSS
     url: https://tess.elixir-europe.org/search?q=miappe
   - name: MIAPPE templates on GitHub
     registry: GitHub
-    url: https://github.com/MIAPPE/MIAPPE/tree/master/MIAPPE_Checklist-Data-Model-v1.1/MIAPPE_templates
+    url: https://github.com/MIAPPE/MIAPPE/tree/master/Templates
   - name: PHIS user documentation
     registry:
     url: https://opensilex.github.io/phis-docs-community/
@@ -49,19 +50,19 @@ The general principles to be considered are described in the [Plant Sciences dom
 
 ### File based data collection
 
-The metadata and description of your experiments should be filled using a [MIAPPE template](https://github.com/MIAPPE/MIAPPE/tree/master/MIAPPE_Checklist-Data-Model-v1.1/MIAPPE_templates). Note that there is a readme that fully describes each field as well as their type and their optional or mandatory status. All fields should be present in the file you are using, even if you leave the optional ones empty. This will allow standard processing and validation using dedicated tools.
+The metadata and description of your experiments should be filled using a [MIAPPE template](https://github.com/MIAPPE/MIAPPE/tree/master/Templates). Note that a README file is provided, which fully describes each field, including its type and whether it is optional or mandatory. All fields should be present in the file you are using, even if you leave the optional ones empty. This will allow standard processing and validation using dedicated tools.
 
 ### Experimental data gathering and management 
 
 #### Systems for file based data collection
 
-* {% tool "fairdom-seek" %} is an open source web-based data sharing platform used as a repository or a catalog. It is being deployed as several instances ranging from confidential project data sharing platforms ([INRAE/AGENT](https://urgi.versailles.inrae.fr/fairdom), VIB) to public repositories like {% tool "fairdomhub" %}. It is MIAPPE compliant through the integration of MIAPPE metadata at the investigation, study and assay levels. It can be used for project based early data sharing, in preparation for long term data storage, but also as a preservation tool for raw data.
-* {% tool "pisa-tree" %} is a data management solution developed to contribute to the reproducibility of research and analyses. Hierarchical set of batch files is used to create standardized nested directory tree and associated files for research projects.
+* {% tool "fairdom-seek" %} is an open source web-based data sharing platform used as a repository or a catalogue. It is being deployed as several instances ranging from confidential project data sharing platforms ([INRAE/AGENT](https://urgi.versailles.inrae.fr/fairdom), VIB) to public repositories like {% tool "fairdomhub" %}. It is MIAPPE compliant through the integration of MIAPPE metadata at the investigation, study and assay levels. It can be used for project based early data sharing, in preparation for long term data storage, but also as a preservation tool for raw data.
+* {% tool "pisa-tree" %} is a data management solution developed to contribute to the reproducibility of research and analyses. Hierarchical set of batch files is used to create standardised nested directory tree and associated files for research projects.
 * {% tool "copo" %} is a data management platform specific to plant sciences.
 
 #### High throughput dedicated systems
 
-* {% tool "phis" %} the open-source Phenotyping Hybrid Information System (PHIS), based on [OpenSILEX](https://github.com/OpenSILEX/), manages and collects data from Phenotyping and High Throughput Phenotyping experiments on a day to day basis. It can store, organize and manage highly heterogeneous (e.g. images, spectra, growth curves) and multi-spatial and temporal scale data (leaf to canopy level) originating from multiple sources (field, greenhouse). 
+* {% tool "phis" %} the open-source Phenotyping Hybrid Information System (PHIS), based on [OpenSILEX](https://github.com/OpenSILEX/), manages and collects data from Phenotyping and High Throughput Phenotyping experiments on a day to day basis. It can store, organise and manage highly heterogeneous (e.g. images, spectra, growth curves) and multi-spatial and temporal scale data (leaf to canopy level) originating from multiple sources (field, greenhouse). 
 It unambiguously identifies all objects and traits in an experiment and establishes their relations via ontologies and semantics that apply to both field and controlled conditions. Its ontology-driven architecture is a powerful tool for integrating and managing data from multiple experiments and platforms, for creating relationships between objects and enriching datasets with knowledge and metadata. It is MIAPPE and BrAPI compliant, and naming conventions are recommended for users to declare their resources. Several experimental platforms use PHIS to manage their data, and PHIS instances dedicated to sharing resources (projects, genetic resources, variables) also exist to allow the sharing of studied concepts.
 * [PIPPA](https://pippa.psb.ugent.be/) is the PSB Interface for Plant Phenotype Analysis, is the central web interface and database that provides the tools for the management of the plant imaging robots on the one hand, and the analysis of images and data on the other hand. The database supports all MIAPPE fields which are accessible through the BrAPI endpoints. Experiment pages are marked up with {% tool "bioschemas" %} to improve findability on google. 
 
@@ -75,7 +76,7 @@ Some analysis tools dedicated to plant phenotyping experiments are registered in
 
 ### Data sharing
 
-The data collected and annotated can be [shared](sharing) in trustworthy repositories under clear conditions of access to the data. As no global central repository exists for phenotyping data, the Plant Science research community combines the use of scattered trustworthy repositories and of centralized search tools. 
+The data collected and annotated can be [shared](sharing) in trustworthy repositories under clear conditions of access to the data. As no global central repository exists for phenotyping data, the Plant Science research community combines the use of scattered trustworthy repositories and of centralised search tools. 
 
 #### Metadata management
 

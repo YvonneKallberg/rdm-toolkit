@@ -2,10 +2,11 @@
 title: Spain
 country_code: ES
 contributors: [Laura Portell Silva, Salvador Capella-Gutierrez, Eva Alloza]
+editors: [Bert Droesbeke, Flora D'Anna, Korbinian Bösl]
 coordinators: [Salvador Capella-Gutierrez]
 
 training:
-  - name: Training in TeSS
+  - name: ELIXIR Spain Training material in TeSS
     registry: TeSS
     url: https://tess.elixir-europe.org/materials?node=Spain&scientific_topics=Data+management
     
@@ -34,6 +35,12 @@ national_resources:
     related_pages:
       Your_role: [researcher, data_steward, research_software_engineer]
     url: https://datos.gob.es/
+  - name: Spanish COVID-19 Data Portal
+    description: Provides information, guidelines, tools and services to support researchers to utilise Spanish and European infrastructures for data sharing. The portal is a national node of the European COVID-19 Data Portal.
+    url: https://www.covid19dataportal.es/
+    related_pages:
+      Tool_assembly: [covid19_data_portal]
+    instance_of: covid-19-data-portal
 ---
 
 ## Introduction 
@@ -42,7 +49,7 @@ This page gives an overview of some of the data management resources in Spain. T
 The [Spanish Ministry of Science and Innovation](https://www.ciencia.gob.es/en/Ministerio/Mision-y-organizacion.html) has developed the [National Strategy for Open Science (Estrategia Nacional de Ciencia Abierta)](https://www.ciencia.gob.es/Estrategias-y-Planes/Estrategias/ENCA.html), launched in 2023, which promotes open, equitable, and efficient sharing of research data across Spain. For researchers in Spain and their international partners, this strategy establishes the foundation for a collaborative and innovative research ecosystem where data is shared responsibly and transparently. The national strategy highlights Spain’s dedication to scientific progress while upholding ethical and legal standards in an increasingly data-driven world. In addition, a guideline on how to prepare a data management plan by the Spanish National Research Council (CSIC) can be found [here](https://digital.csic.es/dc/politicas/preparacion-planes-gestion-datos.jsp).
 
 ## Relevant initiatives
-- [Aporta](https://datos.gob.es/es/acerca-de-la-iniciativa-aporta): An initiative that aims to harmonize and efficiently take advantage of the synergies between ongoing open data projects. It seeks to always drive and coordinate actions being carried out by different levels of the administration, the private sector and academic field, according to an integrating governance model.
+- [Aporta](https://datos.gob.es/es/acerca-de-la-iniciativa-aporta): An initiative that aims to harmonise and efficiently take advantage of the synergies between ongoing open data projects. It seeks to always drive and coordinate actions being carried out by different levels of the administration, the private sector and academic field, according to an integrating governance model.
 - [Research Data Alliance (RDA) in Spain](https://www.rd-alliance.org/groups/rda-spain): This is the space dedicated to the activities, news and events of the RDA Spanish Node.
 - [E-science network](https://www.e-ciencia.es/): Inclusive initiative that combines efforts, shares information and aims to strengthen the position of Spanish institutions within the framework of the European Open Science Cloud (EOSC).
 - [SOMMa Open Science group](https://www.somma.es/research/open-science): SOMMa embraces Open Science to make research more collaborative, reproducible, and accessible, and to engage all levels of an inquiring society.
@@ -67,7 +74,7 @@ Non-exhaustive list of research institutions with Data Management Policies in Sp
 A collection of general and topic-specific resources has been compiled to help streamline data management practices and protect research data. These resources aim to boost productivity while ensuring research is conducted in a compliant, transparent, and reproducible manner.
 
 ### Federated European Genome-phenome Archive (FEGA) Spanish node
-The FEGA is the primary European resource for discovering and accessing sensitive human -omics- data consented for secondary use. The network comprises national repositories that ensure data remains in local jurisdictions while being discoverable through the main EGA portal and accessed across international borders in a federated manner. The [Spanish National Bioinformatics Institute (INB)](https://inb-elixir.es/), as the ELIXIR node in Spain, and in collaboration with the EGA team at the [Centre for Genomic Regulation (CRG)](https://www.crg.eu/), has established the [Spanish Federated EGA node (ES-FEGA)](https://f1000research.com/posters/11-607), primarily hosted at [BSC](https://www.bsc.es/) facilities.
+The {% tool "fega" %} is the primary European resource for discovering and accessing sensitive human -omics- data consented for secondary use. The network comprises national repositories that ensure data remains in local jurisdictions while being discoverable through the main EGA portal and accessed across international borders in a federated manner. The [Spanish National Bioinformatics Institute (INB)](https://inb-elixir.es/), as the ELIXIR node in Spain, and in collaboration with the EGA team at the [Centre for Genomic Regulation (CRG)](https://www.crg.eu/), has established the [Spanish Federated EGA node (ES-FEGA)](https://f1000research.com/posters/11-607), primarily hosted at [BSC](https://www.bsc.es/) facilities.
 
 ### Spanish COVID-19 Data Portal
 The [Spanish COVID-19 Data Portal](https://www.covid19dataportal.es/) provides information, guidelines, tools and services to support researchers in utilising Spanish and European infrastructures for data sharing, in particular the [European COVID-19 Data Portal](https://www.covid19dataportal.org/). For those interested in ongoing large research projects in Spain, we have compiled a list of projects funded by major funding agencies.

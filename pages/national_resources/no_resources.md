@@ -3,13 +3,14 @@
 title: Norway
 country_code: "NO"
 contributors: [Nazeefa Fatima, Federico Bianchini, Korbinian Bösl, Erin Calhoun]
-coordinators: [Korbinian Bösl, Nazeefa Fatima]
+editors: [Federico Bianchini, Korbinian Bösl, Nazeefa Fatima]
+coordinators: [Korbinian Bösl]
 
 related_pages:
   Tool_assembly: [tsd, nels, marine_assembly, fairtracks]
 
 training:
-  - name: Training in TeSS
+  - name: ELIXIR Norway Training material in TeSS
     registry: TeSS
     url: https://tess.elixir-europe.org/events?include_expired=true&node=Norway
   - name: ELIXIR Norway community in Zenodo
@@ -50,13 +51,14 @@ national_resources:
       Your_tasks: [data_analysis]
       Tool_assembly: [marine_assembly]
     url: https://sfb.mmp2.sigma2.no/metapipe/
-  - name: Norwegian COVID-19 Data Portal
-    description: The Norwegian COVID-19 Data Portal aims to bundle the Norwegian research efforts and offers guidelines, tools, databases and services to support Norwegian COVID-19 researchers.
+  - name: Pathogens Portal Norway
+    description: The portal provides information about available datasets, resources, tools, and services related to pandemic preparedness in Norway. The portal gives researchers, clinicians and policymakers access to an extensive collection of biomolecular data about pathogens.
     related_pages:
       Your_domain: [human_data]
       Your_tasks: [sensitive, existing_data, data_publication]
       Tool_assembly: [covid19_data_portal]
     url: https://pathogens.no/
+    instance_of: pathogens-portal
   - name: Federated EGA Norway node
     description: Federated instance collects metadata of -omics data collections stored in national or regional archives and makes them available for search through the main EGA portal. With this solution, sensitive data will not physically leave the country, but will reside on TSD.
     how_to_access: Life Science Login (LS Login); intended for data from Norwegian institutions
@@ -94,8 +96,8 @@ national_resources:
       Your_tasks: [data_analysis]
     url: https://documentation.sigma2.no/hpc_machines/hardware_overview.html
   - name: Norwegian Research and Education Cloud (NREC)
-    description: NREC is an Infrastructure-as-a-Service (IaaS) project between the University of Bergen and the University of Oslo, with additional contributions from NeIC (Nordic e-Infrastructure Collaboration) and Uninett., commonly referred to as a cloud infrastructure An IaaS is a self-service infrastructure where you spawn standardized servers and storage instantly, as needed, from a given resource quota.
-    how_to_access: All users at educational institutions via Feide
+    description: NREC (formerly known as UH-IaaS) is a collaboration project between the University of Bergen and the University of Oslo, with additional contributions from NeIC (Nordic e-Infrastructure Collaboration) and Uninett. It has been in production since 2016 and is currently providing cloud infrastructure for several high-profile academic projects, including CERN's ALICE and ATLAS experiments. The hardware is located exclusively on-premise at UiO and UiB, the services are developed locally, and the infrastructure is almost entirely based on open-source software and open standards, making this a more transparent alternative to commercial cloud providers.
+    how_to_access: Feide or upon application
     instance_of: openstack
     related_pages:
       Your_tasks: [data_analysis, storage]
@@ -122,7 +124,7 @@ national_resources:
       Your_tasks: [data_analysis, sensitive, storage]
     url: https://www.ntnu.edu/mh/huntcloud
   - name: SAFE
-    description: SAFE (secure access to research data and e-infrastructure) is  the solution for the secure processing of sensitive personal data in research at the University of Bergen. SAFE is based on the “Norwegian Code of conduct for information security in the health and care sector” (Normen) and ensures confidentiality, integrity, and availability are preserved when processing sensitive personal data. Through SAFE, the IT department offers a service where employees, students and external partners get access to dedicated resources for processing of sensitive personal data.
+    description: SAFE (secure access to research data and e-infrastructure) is  the solution for the secure processing of sensitive personal data in research at the University of Bergen. SAFE is based on the "Norwegian Code of conduct for information security in the health and care sector" (Normen) and ensures confidentiality, integrity, and availability are preserved when processing sensitive personal data. Through SAFE, the IT department offers a service where employees, students and external partners get access to dedicated resources for processing of sensitive personal data.
     how_to_access: Access to SAFE requires a University of Bergen computer account. However, each department has approvers who can create external accounts for partners if needed.
     related_pages:
       Your_domain: [human_data]
@@ -155,10 +157,29 @@ national_resources:
       Your_tasks: [sensitive]
       Tool_assembly: [tsd]
     url: https://nettskjema.no/
+  - name: SkyHigh IIK
+    description: SkyHigh is IIK's installation in Gjøvik. Used for education and research activities.
+    how_to_access: NTNU internal or upon application
+    instance_of: openstack
+    url: https://skyhigh.iik.ntnu.no
+  - name: SkyLow IIK
+    description: SkyLow is IIK's testing and development platform.
+    how_to_access: NTNU internal or upon application
+    instance_of: openstack
+    url: https://skylow.iik.ntnu.no
+  - name: Stack NTNU IT
+    description: Stack is NTNU IT's general purpose OpenStack cloud.
+    how_to_access: NTNU internal or upon application
+    instance_of: openstack
+    url: https://stack.it.ntnu.no
+  - name: Pile NTNU IT
+    description: Pile is NTNU IT's testing and development platform.
+    how_to_access: NTNU internal or upon application
+    instance_of: openstack
+    url: https://pile.it.ntnu.no
 ref_to_main_resources:
   - mardb
   - marfun
-
 ---
 
 <!---Following information for the page text. All fields are optional--->
@@ -228,7 +249,7 @@ Details and provided solutions vary according to each institution:
 
 The [ELIXIR Norway Helpdesk](https://elixir.no/helpdesk) offers bioinformatics and data management support together with documentation and support for using ELIXIR Norway's life science infrastructures. Researchers in Norway as well as international collaborators—including private companies and governmental research institutions—can contact the Helpdesk to request access to data management services.
 
-The [Global Biodiversity Information Facility (GBIF) Norway Helpdesk](https://www.gbif.no/services/) supplies IT-services and assistance with deposition of biodiversity data to affiliated organizations. If you are not currently part of the GBIF community, you can follow their guidelines to request endorsement. The GBIF network supports four classes of datasets: resources metadata, checklists, occurrences, and sampling-event data.
+The [Global Biodiversity Information Facility (GBIF) Norway Helpdesk](https://www.gbif.no/services/) supplies IT-services and assistance with deposition of biodiversity data to affiliated organisations. If you are not currently part of the GBIF community, you can follow their guidelines to request endorsement. The GBIF network supports four classes of datasets: resources metadata, checklists, occurrences, and sampling-event data.
 
 The [ELSI helpdesk for biobanking](https://bbmri.no/help-desk-elsi) facilitates compliance with Norway-specific regulations and standards for ethical, legal, and societal issues, as part of Biobank Norway (BBMRI-NO).
 
@@ -293,7 +314,7 @@ ELIXIR Norway offers the comprehensive NeLS tool assembly for researchers in Nor
 
 ### Federated European Genome-phenome Archive (EGA) Norway node
 
-Established by ELIXIR Norway and hosted by the University of Oslo, the Norwegian Federated EGA node provides a secure, controlled platform for sharing and archiving sensitive personal data. This service prioritises making sensitive data findable, accessible, interoperable, and reusable (FAIR) while fully complying with GDPR and the Norwegian Personal Data Act. You can boost the visibility of your datasets while maintaining control over access permissions with a designated data access committee. Learn more at the [Norwegian node of the European genome-phenome archive for sensitive human (genetic) data](https://ega.elixir.no/).
+Established by ELIXIR Norway and hosted by the University of Oslo, the Norwegian node of {% tool "fega" %} provides a secure, controlled platform for sharing and archiving sensitive personal data. This service prioritises making sensitive data findable, accessible, interoperable, and reusable (FAIR) while fully complying with GDPR and the Norwegian Personal Data Act. You can boost the visibility of your datasets while maintaining control over access permissions with a designated data access committee. Learn more at the [Norwegian node of the European genome-phenome archive for sensitive human (genetic) data](https://ega.elixir.no/).
 
 ### Norwegian tools assembly for sensitive personal data
 
@@ -349,11 +370,12 @@ These are some of the laws relevant for research data management in Norway. You 
 * Transitional rules on the processing of personal data [Overgangsregler om behandling av personopplysninger](https://lovdata.no/dokument/SF/forskrift/2018-06-15-877)
 * [The Norwegian Data Protection Agency: Journalistic, academic, artistic and literary purposes](https://www.datatilsynet.no/regelverk-og-verktoy/lover-og-regler/personvern-og-ytrings--og-informasjonsfrihet/)
 * [The Norwegian Data Protection Agency: Code of Conduct on Information Security and Internal Control](https://www.datatilsynet.no/regelverk-og-verktoy/atferdsnorm/)
+* [RDA-Norway: Guidelines for sharing research data with personal information](https://doi.org/10.18711/j7pc-7883)
 
 ### Health research data
 
 * [Health Research Act](https://lovdata.no/dokument/LTI/lov/2008-06-20-44)
-* [Regulations on the organization of medical and health research](http://www.lovdata.no/for/sf/ho/ho-20090701-0955.html)
+* [Regulations on the organisation of medical and health research](http://www.lovdata.no/for/sf/ho/ho-20090701-0955.html)
 * [Comments to health research legislative work by the Norwegian government](https://www.regjeringen.no/globalassets/upload/hod/hra/veileder-til-helseforskningsloven.pdf)
 * [Health Register Act](https://lovdata.no/dokument/NL/lov/2014-06-20-43)
 * [Regulations on population-based health surveys](https://lovdata.no/dokument/SF/forskrift/2018-04-27-645)

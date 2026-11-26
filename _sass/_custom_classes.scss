@@ -1,6 +1,6 @@
 /*-----General styling-----*/
 
-@media (min-width: 992px) {
+@include media-breakpoint-up(lg) {
     main h1:not(.has-subtitle):not(.blurb-title),
     main .h1:not(.has-subtitle) {
         margin-top: -1rem;
@@ -12,7 +12,7 @@
 }
 
 // Light gray background on the left
-@media (min-width: 992px) {
+@include media-breakpoint-up(lg) {
     body:not(:has(.landingpage)) {
         .anchorjs-link {
             font-size: 0.7em !important;
@@ -34,16 +34,16 @@
             padding-left: 2.1rem;
             background-color: $white;
         }
-        background-image: url("../img/background.svg"); /* The image used */
-        background-position: center; /* Center the image */
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
+        background: linear-gradient(to right, $light 0 50%, $body-bg 50% 100%);    
     }
 }
 
-@media (max-width: 992px) {
+@include media-breakpoint-down(lg) {
     .sidebar-collapse {
         background-color: $light;
+    }
+    #sidebar>nav .sidebar-title-wrapper {
+        background: $white;
     }
 }
 
@@ -75,17 +75,10 @@
     margin-right: auto;
 }
 
-@media (max-width: 992px) {
+@include media-breakpoint-down(lg) {
     .sidebar_rdm {
         width: 200px;
     }
-}
-
-#side-nav .btn.sidebar-title {
-    border: 0;
-    border-bottom: 0.2rem solid $primary !important;
-    font-weight: bold;
-    padding-bottom: $input-btn-padding-y - 0.2rem;
 }
 
 #side-nav > ul {
@@ -95,11 +88,17 @@
 /* -----Homepage----- */
 
 .landingpage, .ways-to-contribute  {
-    .card {
-        &:hover {
+    .card,
+    .landing-tile {
+        transition: $transition-base;
+
+        &:hover,
+        &:focus-within {
             box-shadow: $box-shadow;
         }
+    }
 
+    .card {
         .card-img-top {
             width: unset;
             padding: $card-spacer-x $card-spacer-x 0 $card-spacer-x;
@@ -171,88 +170,118 @@ section#search-section {
     }
 }
 
-#search-label-tiles {
-    background-color: $light;
-}
 
 
 /*-----Top navigation-----*/
 
 .navbar-nav .nav-item > a {
     white-space: nowrap;
-    &.active {
-        background-color: $primary;
-        border-radius: $border-radius;
-    }
 }
 
 /*-----Better tools-----*/
 .tool {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
     border-radius: 1rem;
     padding-right: 0.5rem;
+    vertical-align: middle;
 }
 
 /*-----New Icons-----*/
 
-// Calender
-i.far.fa-calendar {
+.landingpage #search-label {
+    background-color: $white;
+}
+
+i.icon-search {
+    display: inline-block;
+    background: url("../img/section-icons/search.svg") center no-repeat;
+    width: 30px;
+    height: 30px;
+
+    &:before {
+        content: "" !important;
+    }
+}
+
+// Calendar
+.news-timeline-date i.icon-calendar,
+.event-card-icon i.icon-calendar {
+    display: inline-block;
     background: url("../img/section-icons/calendar.svg") center no-repeat;
     width: 17px;
     height: 17px;
     margin-bottom: -2px;
+
     &:before {
         content: "";
     }
 }
 
-i.fa-solid.fa-map-marker-alt {
+// Map pin
+.event-card-date i.icon-map-pin {
+    display: inline-block;
     background: url("../img/section-icons/pin.svg") center no-repeat;
     width: 17px;
     height: 17px;
     margin-bottom: -2px;
+
     &:before {
         content: "";
     }
 }
 
-// Fork
-i.fa-solid.fa-code-branch {
+// Git branch
+.news-timeline-date i.icon-git-branch {
+    display: inline-block;
     background: url("../img/section-icons/git.svg") center no-repeat;
     width: 20px;
     height: 20px;
     margin-bottom: -2.5px;
+
     &:before {
         content: "";
     }
 }
 
-// Search
-nav #search-label,
-.landingpage #search-label,
-nav #search-input {
-    background-color: $white;
+/*-----News and events-----*/
+
+.news-timeline-date {
+    .news-metadata-item {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
 }
-i.fa-solid.fa-magnifying-glass {
-    background: url("../img/section-icons/search.svg") center no-repeat;
-    width: 30px;
-    height: 30px;
-    &:before {
-        content: "";
+
+.event-card-date {
+    time {
+        white-space: nowrap;
     }
 }
 
 // Tool snippet
 
-i.fa-solid.fa-wrench {
-    background: url("../img/section-icons/info2.svg") center no-repeat;
-    &:before {
-        content: "";
-    }
+.tool i.icon-wrench {
+    display: inline-block;
+    flex: 0 0 auto;
+    background: url("../img/section-icons/info2.svg") center / contain no-repeat;
     width: 1.2rem;
     height: 1.2rem;
-    margin-bottom: -0.25rem;
+    margin: 0 !important;
+    line-height: 1;
+
+    &::before {
+        content: "";
+    }
 }
+
+// Citation/Bibiography styling
 
 a.citation span {
     font-size: small;
 }
+
+.bibliography { 
+    margin-top: 2rem; 
+} 

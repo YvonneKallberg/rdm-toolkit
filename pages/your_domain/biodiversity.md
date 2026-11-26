@@ -1,39 +1,36 @@
 ---
 title: Biodiversity
 description: Data management solutions for biodiversity data.
-contributors: [Josephine Burgin, Joana Pauperio, Anne-Françoise Adam-Blondon, Patrick Ruch, Robert Waterhouse, Valeria Di Cola, Erwan Corre, Yvan Le Bras, Peter Woollard, Bachir Balech, Matteo Montagna, Angela P. Fuentes Pardo, Solenne Correard]
+contributors: [Josephine Burgin, Joana Paupério, Anne-Françoise Adam-Blondon, Patrick Ruch, Robert Waterhouse, Valeria Di Cola, Erwan Corre, Yvan Le Bras, Peter Woollard, Bachir Balech, Matteo Montagna, Angela Fuentes Pardo, Solenne Correard]
+editors: [Bert Droesbeke, Flora D'Anna]
 page_id: biodiversity
 related_pages: 
   Your_tasks: [dmp, data_organisation, metadata, data_brokering, machine_actionability, compliance, data_analysis]
-  Tool_assembly: [galaxy, fairtracks]
+  Tool_assembly: [galaxy, fairtracks, metabarcoding_assembly]
 # More information on which page id you can use can be found at https://rdmkit.elixir-europe.org/website_overview
 training:
-  - name: Training about Biodiversity data
+  - name: Biodiversity data Search query in TeSS
     registry: TeSS
     url: https://tess.elixir-europe.org/search?q=biodiversity+data
-
-  - name: TeSS Collection of biodiversity-relevant training resources
+  - name: Biodiversity Training material in TeSS
     registry: TeSS
     url: https://tess.elixir-europe.org/collections/elixir-biodiversity-community
-
   - name: Galaxy Training Network
-    registry: other
     url: https://training.galaxyproject.org/
-
   - name: ERGA Knowledge Hub
-    registry: other
     url: https://knowledge.erga-biodiversity.eu/
-
-  - name: Glittr
-    registry: other
+  - name: Glittr training resources
     url: https://glittr.org/
-
-# More information on how to fill in this metadata section can be found here https://rdmkit.elixir-europe.org/page_metadata
+fairsharing:
+- name: Biodiversity collection
+  url: https://fairsharing.org/7490
 ---
 
 ## Introduction
 
 While there is significant literature around biodiversity loss, there is a limited effort in reviewing biodiversity using high-throughput data acquisition technologies. Today, scientists recognise the important roles that genetic and genomic data (e.g. reference genomes, DNA/RNA barcoding approaches, metagenomics and metabarcoding), can play in biodiversity discovery, assessment, monitoring, conservation, and restoration, and its impact in policy and decision making processes. 
+
+Metabarcoding is an environmental DNA (eDNA) method. Unlike methods based on direct tissue sampling, it identifies the species present in an environment from DNA traces recovered from environmental samples, such as water, soil or air. It is often used by biodiversity observatories to monitor the biodiversity of a given ecosystem. It relies on gene markers to amplify a highly conserved gene region, for example the 18S rRNA gene or CO1. The raw sequences obtained from amplification are matched and classified against a reference database, producing occurrence tables of Amplicon Sequence Variants (ASVs) or Operational Taxonomic Units (OTUs). For more details on managing metabarcoding data, see the [Metabarcoding tool assembly](metabarcoding_assembly).
 
 These research activities present unique data management challenges, especially in terms of complexity, data integration, and the need for interoperability across diverse datasets. Some of challenges include:
 
@@ -44,10 +41,10 @@ These research activities present unique data management challenges, especially 
 * Handling and processing large-scale biodiversity data: molecular data (e.g., genomics or transcriptomics data) handling requires bioinformatics pipelines that are computationally intensive and can scale with large datasets.  
 * Tracking provenance: ensuring proper tracking of the provenance, updates, and transformations of datasets is crucial, especially in collaborative biodiversity projects involving multiple stakeholders.
 
-Addressing these challenges requires collaborative solutions involving better metadata practices, advanced bioinformatics tools, improved data integration platforms, and standardization efforts across the global biodiversity research community.
+Addressing these challenges requires collaborative solutions involving better metadata practices, advanced bioinformatics tools, improved data integration platforms, and standardisation efforts across the global biodiversity research community.
 
 In addition to the specific data management challenges faced in biodiversity research, there is the need to move towards [Open Link Data](https://www.ontotext.com/knowledgehub/fundamentals/linked-data-linked-open-data/) in Biodiversity and a linked **Biodiversity Knowledge Graph** (see [machine actionability](machine_actionability) for further information on knowledge graph)**.**   
-This shift could fundamentally transform the landscape of biodiversity research by enabling more efficient data integration, discovery, and re-use. Moving towards a **Biodiversity Knowledge Graph** represents an ambitious but essential step in modernizing biodiversity research. While significant challenges remain, the potential for improved data integration, accessibility, and re-use across multiple disciplines could transform the field and open up new avenues for understanding and conserving biodiversity.
+This shift could fundamentally transform the landscape of biodiversity research by enabling more efficient data integration, discovery, and re-use. Moving towards a **Biodiversity Knowledge Graph** represents an ambitious but essential step in modernising biodiversity research. While significant challenges remain, the potential for improved data integration, accessibility, and re-use across multiple disciplines could transform the field and open up new avenues for understanding and conserving biodiversity.
 
 
 ## Biological resource management and compliance
@@ -70,7 +67,7 @@ Here, we highlight key considerations to keep in mind when managing biological r
 * Ensure that due diligence was made regarding Nagoya treaty compliance, possibly with the help of your national focal point or institutional help desk. The {% tool "ggbn" %} has developed a [ABS FactSheet and answer page](https://wiki.ggbn.org/ggbn/ABS_Fact_Sheet_and_Answers_to_Frequently_Asked_Questions) to help their network of biobanks to comply with the Nagoya protocol. More information is available on the [Compliance monitoring & measurement](compliance_monitoring#how-can-you-ethically-access-genetic-resources-of-another-country) page. The main steps are summarised below:  
   * Check whether the countries where the samples are to be collected have signed the protocol, and identify the national entities that are issuing the permits for sample collection through the Access and Benefit Sharing Clearing House ([ABSCH](https://absch.cbd.int/en/?_gl=1*1taqnzf*_ga*NTEwOTEwMTYyLjE3Mjc2ODQwOTQ.*_ga_7S1TPRE7F5*MTcyNzY4NDA5My4xLjEuMTcyNzY4NDE5My42MC4wLjA.))  
   * If required, obtain the Prior Informed Consent (PIC) and Mutually Agreed Terms (MAT) and the final national permit of collection from the relevant(s) national focal point(s).  
-  * Submit a Due Diligence declaration to the European Web-portal DECLARE (for European researchers) or to the ABSCH to get your Internationally Recognized Certificate of Compliance (IRCC).   
+  * Submit a Due Diligence declaration to the European Web-portal DECLARE (for European researchers) or to the ABSCH to get your Internationally Recognised Certificate of Compliance (IRCC).   
 * Ensure that the CARE principles are taken into account. If the samples are related to Indigenous Peoples and/or Local Communities, engage with the relevant communities during the planning phase of the experiment{% cite mc_cartney2023jk %}. Mc Cartney *et al.* offer a framework, grounded in environmental justice and the CARE principles, for biodiversity genomic researchers, projects, and initiatives to support and promote the building of trustworthy and sustainable partnerships with Indigenous Peoples & Local Communities. Among other topics, engagement should consider:  
   * How the community will possibly access the specimens/samples collected and data generated.  
   * How the data will be labelled, accessed, and reused, including by the Indigenous communities for their own purposes, using, for example, [Local Contexts Labels and Notices](https://localcontexts.org/fr/).  
@@ -85,7 +82,7 @@ Here, we highlight key considerations to keep in mind when managing biological r
  
 ### Description
 
-Collecting and organizing rich metadata for biological materials, such as those stored in biobanks or specimen collections, is essential for enabling data interpretation, reuse, and integration across biodiversity studies. These materials are often linked to other types of data, including genomic sequences, images, phenotypic traits, and environmental context, making consistent metadata especially critical. However, a major challenge lies in identifying and applying suitable metadata standards, as multiple frameworks exist with varying levels of compatibility, coverage, and specificity. This complexity can hinder the accurate and interoperable description of samples, their origin, and associated information. In addition, managing persistent identifiers and maintaining consistent metadata across biological materials and their associated data is crucial for ensuring long-term traceability and interoperability. 
+Collecting and organising rich metadata for biological materials, such as those stored in biobanks or specimen collections, is essential for enabling data interpretation, reuse, and integration across biodiversity studies. These materials are often linked to other types of data, including genomic sequences, images, phenotypic traits, and environmental context, making consistent metadata especially critical. However, a major challenge lies in identifying and applying suitable metadata standards, as multiple frameworks exist with varying levels of compatibility, coverage, and specificity. This complexity can hinder the accurate and interoperable description of samples, their origin, and associated information. In addition, managing persistent identifiers and maintaining consistent metadata across biological materials and their associated data is crucial for ensuring long-term traceability and interoperability. 
 
 Here, we suggest commonly used metadata standards, as well as repositories and registries for metadata publication, to support effective and FAIR-compliant biobanking and biodiversity data management.
 
@@ -93,7 +90,7 @@ Here, we suggest commonly used metadata standards, as well as repositories and r
 
 Certain core metadata—such as collection date, biome, and geographical location—should always be collected to ensure basic contextualization and future usability. Beyond these essentials, the specific research context and use case will determine which additional metadata are most valuable. Key considerations include:
 
-* Type of biological material: What kind of sample is being collected and analyzed (e.g., tissue, DNA, environmental sample)?  
+* Type of biological material: What kind of sample is being collected and analysed (e.g., tissue, DNA, environmental sample)?  
 * Type and intended use of data: What kind of data will be generated (e.g., genomic, phenotypic, environmental), and how is it expected to be used or reused?  
 * Storage context: Will the biological material be preserved in a biobank, museum, or other long-term repository?  
 * Data submission destination: Which database, repository, or registry will host the resulting data and metadata?
@@ -120,7 +117,7 @@ Collecting extensive (or "long-tail") metadata can greatly enhance data reuse an
 * If possible keep vouchers and your tissues and DNA samples in a biobank/collection with relevant metadata (see Biological resource management and compliance)  
 * The {% tool "ggbn" %} is a global network of curated collections of genomic samples, working together to make DNA and tissue collections discoverable for biodiversity research. {% tool "ggbn" %} is actively developing resources and recommendations for data management in relation to biobanking and specimen collections with their networks of repositories \- [GGBN data standard](https://wiki.ggbn.org/ggbn/GGBN_Data_Standard).   
 * The Consortium of European Taxonomic Facilities ({% tool "cetaf" %}), an European Network of biological and geological collections, generates specimen identifiers for specimens in CETAF collections.  
-* The European research infrastructure {% tool "dissco" %} (Distributed System of Scientific Collections) is working on developing a Digital Specimen Repository where DOIs will be provided for digital specimens.  
+* The European research infrastructure [DiSSCo](https://www.dissco.eu/) (Distributed System of Scientific Collections) is working on developing a Digital Specimen Repository where DOIs will be provided for digital specimens.  
 * In the sample metadata in {% tool "biosamples" %}, reference the specimen or tissue/DNA samples using persistent identifiers available or using the {% tool "dwc" %} standard (‘triplet’ that includes the institution and collection codes, and specimen catalogue number), see also recommendations in Agosti D. et al.{% cite agosti2022vt %}.  
 * In relation with collections of genetic resources that also encompass the intraspecific diversity, part of the recommendations are developed in the frame of FAO’s activities and completed through consortia of researchers supported by initiatives such as the Research Data Alliance.  
 * You can also find relevant information by consulting other domain pages related to Biodiversity:  
